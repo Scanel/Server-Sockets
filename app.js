@@ -6,7 +6,7 @@ const io = require('socket.io')(server, {
     cors: '*',
     withCredentials: false
 });
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 io.on('connection', (socket) => {
     socket.on('join', (data) =>{
